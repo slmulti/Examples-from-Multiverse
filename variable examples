@@ -93,3 +93,18 @@ run();
 
 
 
+function reverse(arr, acc = []) {
+  
+  if (arr.length) { 
+    const [ head, ...tail ] = arr;
+    return reverse(tail, [head].concat(acc));
+  } else {
+    
+    return acc;
+  }
+}
+
+console.log(reverse([1,2,3,4]))
+
+
+
